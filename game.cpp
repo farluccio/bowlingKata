@@ -10,15 +10,16 @@
  * mimic roll
  */
 void Game::roll(int frame) {
-
+	runningScore += frame
 }
 
 /**
  *
  * Returns final game score
  */
-int Game::scoreGame() {
-    return 0;
+int Game::scoreGame(int runningScore) {
+    
+	return runningScore;
 }
 
 

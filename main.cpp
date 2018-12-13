@@ -33,7 +33,7 @@ TEST_CASE("Gutter Game Return 0","[score]")
 
 }
 
-TEST_CASE("Single Pine Game Return","[score]")
+TEST_CASE("Single Pin Game Return 20","[score]")
 {
 
     // Arrange
@@ -43,9 +43,37 @@ TEST_CASE("Single Pine Game Return","[score]")
     for(int frame = 0; frame < 20; frame++)
     {
         g.roll(pins);
+		
     }
 
     // Assert
-    REQUIRE(20 == g.scoreGame());
+    REQUIRE(20 == g.scoreGame(runningScore));
+
+}
+
+TEST_CASE("Roll 5,5,3 Game Return 16","[score]")
+{
+
+    // Arrange
+    Game g;
+    int pins = 1;
+    // Act
+	for(int frame = 0; frame < 2; frame++)
+    {
+		for(throwBall = 0; throwBall < 2; roll++)
+		{
+			g.roll(5);
+		}
+    }
+    for(int frame = 0; frame < 10; frame++)
+    {
+		for(throwBall = 0; throwBall < 2; roll++)
+		{
+			g.roll(pins);
+		}
+    }
+
+    // Assert
+    REQUIRE(20 == g.scoreGame(runningScore));
 
 }

@@ -7,7 +7,7 @@
 
 
 class Game {
-    int frameScore();
+    int runningScore = 0;
 public:
     void roll(int frame);
     int scoreGame(int frameScore);
